@@ -159,11 +159,11 @@ check_status() {
     fi
     if [[ "$CLIENT_STATUS" == "运行中" ]]; then
         local port=$(ss -nltp | grep -m1 '"warp-svc"' | awk '{print $4}' | awk -F: '{print $NF}')
-        if [[ -n "$port" ]]; then extra_opts="--socks5-hostname 127.0.0.1:$port"; fi
+        if [[ -n "$port" ]]; then extra_opts="--socks5 127.0.0.1:$port"; fi
         expected_stack="双栈 (Dual-Stack)"; RECONNECT_CMD="/usr/bin/warp r"
     elif [[ "$WIREPROXY_STATUS" == "运行中" ]]; then
         local port=$(ss -nltp | grep -m1 '"wireproxy"' | awk '{print $4}' | awk -F: '{print $NF}')
-        if [[ -n "$port" ]]; then extra_opts="--socks5-hostname 127.0.0.1:$port"; fi
+        if [[ -n "$port" ]]; then extra_opts="--socks5 127.0.0.1:$port"; fi
         expected_stack="双栈 (Dual-Stack)"; RECONNECT_CMD="/usr/bin/warp y"
     elif wg show warp &> /dev/null; then
         if [ -f /etc/wireguard/warp.conf ]; then
