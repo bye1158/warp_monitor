@@ -20,8 +20,15 @@
 
   - 一台已通过 [fscarmen/warp-sh](https://github.com/fscarmen/warp-sh) 脚本成功安装 WARP 的 Linux 服务器。
   - `root` 用户权限（用于配置日志和定时任务，以及执行网络命令）。
+  - 
+## warp  
+wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh [option] [lisence/url/token] 
+
+## warp-go  
+wget -N https://gitlab.com/fscarmen/warp/-/raw/main/warp-go.sh && bash warp-go.sh [option] [lisence]
 
 ## 🚀 使用方法
+
 
 ### 首次安装与执行
 
