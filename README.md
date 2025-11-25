@@ -33,6 +33,12 @@ wget -N https://gitlab.com/fscarmen/warp/-/raw/main/warp-go.sh && bash warp-go.s
 ```
 bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/warp-yg/main/CFwarp.sh)
 ```
+## wireguard修复
+```
+rm -f /etc/wireguard/warp.conf
+rm -f /etc/wireguard/warp*
+```
+
 ## 🚀 使用方法
 
 
