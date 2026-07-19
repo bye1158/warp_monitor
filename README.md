@@ -60,21 +60,20 @@ curl -sSL -o /root/warp_monitor.sh "https://raw.githubusercontent.com/Michaol/wa
 
 
 如需完全移除此监控脚本，请执行以下步骤：
-# 1. 移除定时任务
+1. 移除定时任务
 crontab -l | grep -v "WARP_MONITOR_CRON" | crontab -
 
-# 2. 删除脚本文件
+2. 删除脚本文件
 rm -f /root/warp_monitor.sh
 
-# 3. 删除 logrotate 配置
+3. 删除 logrotate 配置
 rm -f /etc/logrotate.d/warp_monitor
 
-# 4. (可选) 删除配置文件
+4. (可选) 删除配置文件
 rm -f /etc/warp_monitor.conf
 
-# 5. (可选) 删除日志文件
+5. (可选) 删除日志文件
 rm -f /var/log/warp_monitor.log*
-### 首次执行后
 
 脚本首次运行后，会自动完成以下工作：
 
